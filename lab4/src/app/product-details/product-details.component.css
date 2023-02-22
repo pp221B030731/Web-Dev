@@ -1,0 +1,14 @@
+img {
+  width: 300px;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+p {
+  text-align: left;
+  width: 300px;
+}
