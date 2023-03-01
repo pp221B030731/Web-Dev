@@ -1,0 +1,15 @@
+<h2>Categories</h2>
+<div class="table">
+
+  <div *ngFor="let categori of categories" class="categori">
+    <h3>
+      <a 
+        [title]="categori.name"
+        [routerLink]= "['/categories', categori.id]">
+        <img src="{{categori.image}}">
+        {{categori.name}}
+      </a>
+    </h3>
+
+  </div>
+</div>

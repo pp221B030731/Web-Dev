@@ -1,0 +1,20 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product" class = "container">
+  <img src="{{product.image}}">
+  <div class="infobox"> 
+    <h3>{{ product.name }}</h3>
+    <h4>Price: {{ product.price | currency }}</h4>
+    <h4>Rating: {{ product.rating }}</h4>
+    <h4>Linkes: {{ product.likes }}</h4>
+
+    <h4>Description: <br><br> {{ product.description }}</h4>
+    <div class="buttons">
+      <button type="button" (click)="buy(product)">Buy</button>
+      <button type="button" (click)="share(product)">Share</button>
+      <button type="button" (click) = "like(product)">Like</button>
+      <button [routerLink] = " ['/categories', product.categoryId] "  type="button" (click) = "remove(product)">Remove</button>
+    </div>
+  </div>
+
+</div>
