@@ -1,0 +1,21 @@
+.table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categori {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 25em;
+}
+
+
+
+img {
+  width: 23em;
+}
+
+
