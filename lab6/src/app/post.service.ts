@@ -12,7 +12,7 @@ export class PostService {
   constructor(private client: HttpClient) { }
 
   getAlbums(): Observable<Albums[]>{
-    return this.client.get<Albums[]>('https://jsonplaceholder.typicode.com/albums');
+    return this.client.get<Albums[]>(`https://jsonplaceholder.typicode.com/albums`);
   }
 
   getAlbum(id: number): Observable<Albums>{
