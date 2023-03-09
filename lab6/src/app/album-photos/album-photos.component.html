@@ -1,1 +1,18 @@
-<p>album-photos works!</p>
+  
+<div *ngIf="loaded">
+  
+  <h1>Photos</h1>
+  <button [routerLink] = "['/albums', savedId]">Return</button>
+  <ul>
+    <li *ngFor="let photo of photos">
+      <p>{{photo.title}}, #{{photo.id}}</p>
+      <img src="{{photo.url}}" alt="">
+
+    </li>
+  </ul>
+
+</div>
+
+
+
+<h3 *ngIf="!loaded">is loading...</h3>

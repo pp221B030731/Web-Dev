@@ -19,4 +19,9 @@ export class AlbumsComponent implements OnInit {
       this.albums = albums;
     });
   }
+
+  remove(i: Albums) {
+    let indx = this.albums.findIndex(j => j.id === i.id);
+    this.albums.splice(indx, 1);
+  }
 }

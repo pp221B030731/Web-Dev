@@ -4,7 +4,10 @@
   <li *ngFor="let album of albums">
     <a [routerLink]="['/albums', album.id]">
       {{album.id}}) {{album.title}}
-    </a>
-
+    </a><br>
+    <button
+    type = "button"
+    (click) = "remove(album)">
+    Remove</button>
   </li>
 </ul>

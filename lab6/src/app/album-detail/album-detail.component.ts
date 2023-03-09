@@ -12,12 +12,17 @@ export class AlbumDetailComponent implements OnInit{
   
   album: Albums;
   loaded: boolean;
-
+  inputTitle: string;
 
   constructor(private route: ActivatedRoute,
               private postService: PostService) {
     this.album = {} as Albums;
     this.loaded = true;
+    this.inputTitle = this.album.title;
+  }
+
+  Save(){
+      this.album.title = this.inputTitle;
   }
 
   ngOnInit(): void {
@@ -33,7 +38,6 @@ export class AlbumDetailComponent implements OnInit{
         })
       }
     });
-
 
   }
 }
